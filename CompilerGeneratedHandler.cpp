@@ -36,20 +36,22 @@ CompilerGeneratedHandler::CompilerGeneratedHandler(Rewriter& rewrite, MatchFinde
 
 void CompilerGeneratedHandler::run(const MatchFinder::MatchResult& result)
 {
+    
+
     if(const auto* methodDecl = result.Nodes.getNodeAs<CXXMethodDecl>("method")) {
-        OutputFormatHelper outputFormatHelper{};
-        outputFormatHelper.Append("/* ");
-
-        CodeGenerator codeGenerator{outputFormatHelper};
-        codeGenerator.InsertAccessModifierAndNameWithReturnType(*methodDecl);
-
-        outputFormatHelper.AppendNewLine("; */");
-
-        // add all compiler generated methods at the end of the class
-        const auto* recrodDecl = result.Nodes.getNodeAs<CXXRecordDecl>("record");
-        const auto  loc        = GetEndLoc(recrodDecl);
-
-        InsertIndentedText(loc, outputFormatHelper);
+//        OutputFormatHelper outputFormatHelper{};
+//        outputFormatHelper.Append("/* ");
+//
+//        CodeGenerator codeGenerator{outputFormatHelper};
+//        codeGenerator.InsertAccessModifierAndNameWithReturnType(*methodDecl);
+//
+//        outputFormatHelper.AppendNewLine("; */");
+//
+//        // add all compiler generated methods at the end of the class
+//        const auto* recrodDecl = result.Nodes.getNodeAs<CXXRecordDecl>("record");
+//        const auto  loc        = GetEndLoc(recrodDecl);
+//
+//        InsertIndentedText(loc, outputFormatHelper);
     }
 }
 //-----------------------------------------------------------------------------

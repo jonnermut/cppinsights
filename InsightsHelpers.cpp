@@ -395,7 +395,8 @@ std::string GetTypeNameAsParameter(const QualType& t, const std::string& varName
     } else if(t->isFunctionPointerType()) {
         InsertAfter(typeName, "(*", varName);
     } else if(!t->isArrayType() && !varName.empty()) {
-        typeName += StrCat(" ", varName);
+        //typeName += StrCat(" ", varName);
+        typeName = varName + ": " + typeName;
     }
 
     return typeName;

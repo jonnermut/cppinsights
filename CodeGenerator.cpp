@@ -126,7 +126,8 @@ OutputFormatHelper& CodeGenerator::LambdaScopeHandler::GetBuffer(OutputFormatHel
 void CodeGenerator::InsertArg(const CXXDependentScopeMemberExpr* stmt)
 {
     InsertArg(stmt->getBase());
-    const std::string op{stmt->isArrow() ? "->" : "."};
+    //const std::string op{stmt->isArrow() ? "->" : "."};
+    std::string op = ".";
 
     mOutputFormatHelper.Append(op, stmt->getMemberNameInfo().getAsString());
 }
@@ -361,7 +362,9 @@ void CodeGenerator::InsertArg(const MemberExpr* stmt)
 
     InsertArg(base);
 
-    const std::string op{stmt->isArrow() ? "->" : "."};
+    //const std::string op{stmt->isArrow() ? "->" : "."};
+    const std::string op = ".";
+
     const auto*       meDecl = stmt->getMemberDecl();
     bool              skipTemplateArgs{false};
     const auto        name = [&]() -> std::string {
@@ -629,15 +632,19 @@ static std::string GetQualifiers(const VarDecl& vd)
 {
     std::string qualifiers{};
 
+    /*
     if(vd.isInline() || vd.isInlineSpecified()) {
         qualifiers += "inline ";
     }
+     */
 
     qualifiers += GetStorageClassAsStringWithSpace(vd.getStorageClass());
 
+    /*
     if(vd.isConstexpr()) {
         qualifiers += "constexpr ";
     }
+     */
 
     return qualifiers;
 }
@@ -661,6 +668,9 @@ void CodeGenerator::InsertArg(const VarDecl* stmt)
     } else {
         if(SkipVarDecl::No == mSkipVarDecl) {
             mOutputFormatHelper.Append(GetQualifiers(*stmt));
+
+            // TODO - use let for const types?
+            mOutputFormatHelper.Append("var ");
 
             if(const auto type = stmt->getType(); type->isFunctionPointerType()) {
                 const auto        lineNo = GetSM(*stmt).getSpellingLineNumber(stmt->getSourceRange().getBegin());
@@ -688,14 +698,26 @@ void CodeGenerator::InsertArg(const VarDecl* stmt)
                 if(stmt->getType()->getAs<TemplateSpecializationType>()) {
                     mOutputFormatHelper.Append(GetNameAsWritten(stmt->getType()), " ", varName);
                 } else {
-                    mOutputFormatHelper.Append(GetTypeNameAsParameter(stmt->getType(), varName));
+
+                    auto realTyp = type.getTypePtr();
+                    bool isAuto = realTyp && clang::AutoType::classof(realTyp);
+                    if (isAuto)
+                    {
+                        mOutputFormatHelper.Append(varName);
+                    }
+                    else
+                    {
+                        mOutputFormatHelper.Append(GetTypeNameAsParameter(stmt->getType(), varName));
+                    }
                 }
             }
         } else {
             const std::string pointer = [&]() {
+                /* ignore for swift
                 if(stmt->getType()->isAnyPointerType()) {
                     return " *";
                 }
+                 */
                 return " ";
             }();
 
@@ -728,14 +750,35 @@ void CodeGenerator::InsertArg(const FunctionDecl* stmt)
     if(const auto* ctor = dyn_cast_or_null<CXXConstructorDecl>(stmt)) {
         InsertArg(ctor);
     } else {
-        InsertAccessModifierAndNameWithReturnType(*stmt, SkipAccess::Yes);
 
-        if(stmt->doesThisDeclarationHaveABody()) {
-            mOutputFormatHelper.AppendNewLine();
-            InsertArg(stmt->getBody());
-            mOutputFormatHelper.AppendNewLine();
+
+
+        if (stmt->doesThisDeclarationHaveABody()) {
+
+            if (stmt->isInlined())
+            {
+
+                InsertAccessModifierAndNameWithReturnType(*stmt, SkipAccess::Yes);
+                mOutputFormatHelper.AppendNewLine();
+                InsertArg(stmt->getBody());
+                mOutputFormatHelper.AppendNewLine();
+            }
         } else {
-            mOutputFormatHelper.AppendNewLine(';');
+
+            for ( auto&& other: stmt->redecls () )
+            {
+                if (other->doesThisDeclarationHaveABody())
+                {
+                    InsertAccessModifierAndNameWithReturnType(*stmt, SkipAccess::Yes);
+                    mOutputFormatHelper.AppendNewLine();
+                    InsertArg(stmt->getBody());
+                    mOutputFormatHelper.AppendNewLine();
+
+                    break;
+                }
+            }
+
+            //mOutputFormatHelper.AppendNewLine(';');
         }
     }
 }
@@ -1155,7 +1198,7 @@ void CodeGenerator::InsertArg(const CStyleCastExpr* stmt)
 
 void CodeGenerator::InsertArg(const CXXNewExpr* stmt)
 {
-    mOutputFormatHelper.Append("new ");
+    // nope mOutputFormatHelper.Append("new ");
 
     if(stmt->getNumPlacementArgs()) {
         /* we have a placement new */
@@ -2603,18 +2646,20 @@ void CodeGenerator::InsertAccessModifierAndNameWithReturnType(const FunctionDecl
         }
     }
 
-    if(decl.isInlined()) {
-        mOutputFormatHelper.Append(kwInlineSpace);
-    }
+//    if(decl.isInlined()) {
+//        mOutputFormatHelper.Append(kwInlineSpace);
+//    }
 
     if(methodDecl) {
-        if(methodDecl->isVirtual()) {
-            mOutputFormatHelper.Append(kwVirtualSpace);
-        }
 
-        if(methodDecl->isVolatile()) {
-            mOutputFormatHelper.Append(kwVolatileSpace);
-        }
+        // TODO: pure virtual
+//        if(methodDecl->isVirtual()) {
+//            mOutputFormatHelper.Append(kwVirtualSpace);
+//        }
+
+//        if(methodDecl->isVolatile()) {
+//            mOutputFormatHelper.Append(kwVolatileSpace);
+//        }
     }
 
     if(decl.isConstexpr()) {
@@ -2694,7 +2739,13 @@ void CodeGenerator::InsertAccessModifierAndNameWithReturnType(const FunctionDecl
             mOutputFormatHelper.Append(outputFormatHelper.GetString());
         } else {
             const auto t = GetDesugarReturnType(decl);
-            mOutputFormatHelper.Append(GetTypeNameAsParameter(t, outputFormatHelper.GetString()));
+
+            mOutputFormatHelper.Append("func ");
+            mOutputFormatHelper.Append(outputFormatHelper.GetString());
+            mOutputFormatHelper.Append(" -> ");
+            mOutputFormatHelper.Append(GetTypeNameAsParameter(t, ""));
+
+            //mOutputFormatHelper.Append(GetTypeNameAsParameter(t, outputFormatHelper.GetString()));
         }
     } else {
         mOutputFormatHelper.Append(outputFormatHelper.GetString());
