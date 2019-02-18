@@ -1,0 +1,2514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1E84CED6BAE04F23929A23D9 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 747F79E72F09407FBFF64A54 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				A803BB9557FF4157A96DF9C0 /* CMake Rules */,
+			);
+			dependencies = (
+				97F365129429453C931D3DE4 /* PBXTargetDependency */,
+				E736C37AD7824622851AEE24 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		542BF7B07FB64632B694A8FE /* docker-build */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 01811CA3FBC34CA39DDDF116 /* Build configuration list for PBXAggregateTarget "docker-build" */;
+			buildPhases = (
+				64336C762021436887E30603 /* CMake Rules */,
+			);
+			dependencies = (
+				B158D6AF2B364458A2CF0408 /* PBXTargetDependency */,
+				DB752BD37AF144889D66A1EA /* PBXTargetDependency */,
+			);
+			name = "docker-build";
+			productName = "docker-build";
+		};
+		7FFF624288984FD7A4DA7E6A /* docker-build-run */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D48338D302344701A1F066AF /* Build configuration list for PBXAggregateTarget "docker-build-run" */;
+			buildPhases = (
+				BAFBD15FFFDF418D99EFEBEE /* CMake Rules */,
+			);
+			dependencies = (
+				0C7C8A5A4CA04B9B96B37D5A /* PBXTargetDependency */,
+				E226062D1D9C46F3862E7AC5 /* PBXTargetDependency */,
+			);
+			name = "docker-build-run";
+			productName = "docker-build-run";
+		};
+		BB8A99BF487A4118B5B53B45 /* tests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0CF830E9510647E38F2FDBE7 /* Build configuration list for PBXAggregateTarget "tests" */;
+			buildPhases = (
+				34E47D16DEEE4E68B8F2B28D /* CMake Rules */,
+			);
+			dependencies = (
+				FCFD053765EC479D9CC9E9B2 /* PBXTargetDependency */,
+			);
+			name = tests;
+			productName = tests;
+		};
+		C1623425A6124A08AE47656B /* docker-build-container */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 23E3C28D51BD4791B47D4ED6 /* Build configuration list for PBXAggregateTarget "docker-build-container" */;
+			buildPhases = (
+				E1695C914AD64F16AC791720 /* CMake Rules */,
+			);
+			dependencies = (
+				B871461898A74D7AB37121CF /* PBXTargetDependency */,
+			);
+			name = "docker-build-container";
+			productName = "docker-build-container";
+		};
+		E16303FDC8AD4D3999B98910 /* tests-docker */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1AB4AC2292B14E8AADF9F26A /* Build configuration list for PBXAggregateTarget "tests-docker" */;
+			buildPhases = (
+				4C0A978BA97844DD93FEB423 /* CMake Rules */,
+			);
+			dependencies = (
+				75E41A21E1E1473292E81A59 /* PBXTargetDependency */,
+			);
+			name = "tests-docker";
+			productName = "tests-docker";
+		};
+		E45C297F8FA248D690996756 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D3FBCAB6C496474CA25826ED /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				F8ECCD6842B74E4085A32C90 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0D0FF62020774D96AC7049D4 /* InsightsBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 651D556B7169487EAFD98C7D /* InsightsBase.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		0DDEAB88F3F74F76A9BEF641 /* CompilerGeneratedHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18A8C012EBF94F429F6C7B80 /* CompilerGeneratedHandler.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		37DCDB923FDA4FBFB22D84DC /* InsightsHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B767EC38069D4C02BC3C7A36 /* InsightsHelpers.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		54354651134445C3A492B046 /* UserDefinedLiteralHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59C13DC9F45E4AB2991D072D /* UserDefinedLiteralHandler.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		652A0C69D37C4539B2ED24A9 /* DPrint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 324B9289F3F5495B97094DAC /* DPrint.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		7F83A2A64F7C44528851F053 /* TemplateHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00208C6C7EF44DEFA828603C /* TemplateHandler.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		875F45C897E645AB98DC9BA4 /* OutputFormatHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5E3B7682686C4F26AE513858 /* OutputFormatHelper.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		8B003DF2948445C1BD9F6BA7 /* FunctionDeclHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB5832D9394A407E87F603FC /* FunctionDeclHandler.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		ABAEC84FD46647EDADC970A8 /* GlobalVariableHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C399CF72E3F437EAE8E5D30 /* GlobalVariableHandler.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		BDACD9595F554F47BCB1ABEF /* Insights.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CF9CE64E84ED462096B97E86 /* Insights.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		C53C268BB93C425C9D6F2604 /* StaticAssertHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A3F2061A0E24A2284CD6F69 /* StaticAssertHandler.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		E465BBEF22CD4FFBB85E8B9B /* ImplicitCastHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ABADC56B51914B81BE0C3D4F /* ImplicitCastHandler.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		EB07062AB5EF488489836910 /* CodeGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0F240C8D935439BAB51582C /* CodeGenerator.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		FBF85E2A8B1B4D648A13B0CC /* AutoStmtHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0E8E3B5406A4BD8B3BAB5F2 /* AutoStmtHandler.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		FCBE21D322191803004E9C6F /* ClassHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCBE21D2221917FB004E9C6F /* ClassHandler.cpp */; };
+		FCBE21DF221AC529004E9C6F /* TypeMapping.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FCBE21DD221AC529004E9C6F /* TypeMapping.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04F93B5A7B764F23B97820AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5F2B81319B840079D4EE2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D60CDC5538B145E0A1E829E7;
+			remoteInfo = insights;
+		};
+		4BB6250EBB024E7CA6DA28E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5F2B81319B840079D4EE2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E45C297F8FA248D690996756;
+			remoteInfo = ZERO_CHECK;
+		};
+		581C2FE06056463DB3170B0D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5F2B81319B840079D4EE2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E45C297F8FA248D690996756;
+			remoteInfo = ZERO_CHECK;
+		};
+		6E04D67849DC4E5A94899FC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5F2B81319B840079D4EE2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E45C297F8FA248D690996756;
+			remoteInfo = ZERO_CHECK;
+		};
+		7119733E07BD4EBB9842A700 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5F2B81319B840079D4EE2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E45C297F8FA248D690996756;
+			remoteInfo = ZERO_CHECK;
+		};
+		7538DED29F7A4DC6B20D2438 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5F2B81319B840079D4EE2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1623425A6124A08AE47656B;
+			remoteInfo = "docker-build-container";
+		};
+		9B2B2BEA5B3944C88F729E04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5F2B81319B840079D4EE2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1623425A6124A08AE47656B;
+			remoteInfo = "docker-build-container";
+		};
+		CD5E5BCCA507483B8BBC3BDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5F2B81319B840079D4EE2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E45C297F8FA248D690996756;
+			remoteInfo = ZERO_CHECK;
+		};
+		DD71504A93864B4CBAE026FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5F2B81319B840079D4EE2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E45C297F8FA248D690996756;
+			remoteInfo = ZERO_CHECK;
+		};
+		F74F63D31D2B401292556C5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5F2B81319B840079D4EE2FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E45C297F8FA248D690996756;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00208C6C7EF44DEFA828603C /* TemplateHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = TemplateHandler.cpp; sourceTree = SOURCE_ROOT; };
+		0F586D6188D6401D8125A0BA /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		17409E10ED1A4B6488FD0F4E /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		18A8C012EBF94F429F6C7B80 /* CompilerGeneratedHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = CompilerGeneratedHandler.cpp; sourceTree = SOURCE_ROOT; };
+		192AB979639D4C9595B3AABE /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2FF2658D111445CCA9C2B901 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		324B9289F3F5495B97094DAC /* DPrint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = DPrint.cpp; sourceTree = SOURCE_ROOT; };
+		526ABFB957874E349542785E /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		59C13DC9F45E4AB2991D072D /* UserDefinedLiteralHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = UserDefinedLiteralHandler.cpp; sourceTree = SOURCE_ROOT; };
+		5C4330000C534A4A8FA028F8 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		5E3B7682686C4F26AE513858 /* OutputFormatHelper.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = OutputFormatHelper.cpp; sourceTree = SOURCE_ROOT; };
+		651D556B7169487EAFD98C7D /* InsightsBase.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = InsightsBase.cpp; sourceTree = SOURCE_ROOT; };
+		6A3F2061A0E24A2284CD6F69 /* StaticAssertHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = StaticAssertHandler.cpp; sourceTree = SOURCE_ROOT; };
+		7C399CF72E3F437EAE8E5D30 /* GlobalVariableHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = GlobalVariableHandler.cpp; sourceTree = SOURCE_ROOT; };
+		964C2751FD1E4807B7E9803F /* insights */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = insights; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABADC56B51914B81BE0C3D4F /* ImplicitCastHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = ImplicitCastHandler.cpp; sourceTree = SOURCE_ROOT; };
+		B0E8E3B5406A4BD8B3BAB5F2 /* AutoStmtHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = AutoStmtHandler.cpp; sourceTree = SOURCE_ROOT; };
+		B767EC38069D4C02BC3C7A36 /* InsightsHelpers.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = InsightsHelpers.cpp; sourceTree = SOURCE_ROOT; };
+		CB5832D9394A407E87F603FC /* FunctionDeclHandler.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = FunctionDeclHandler.cpp; sourceTree = SOURCE_ROOT; };
+		CF9CE64E84ED462096B97E86 /* Insights.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = Insights.cpp; sourceTree = SOURCE_ROOT; };
+		D589837135AF4BD6AAC2A5F7 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		E0F240C8D935439BAB51582C /* CodeGenerator.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; path = CodeGenerator.cpp; sourceTree = SOURCE_ROOT; };
+		F6CF5243DF024D528DB3F2A1 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FCBE21D2221917FB004E9C6F /* ClassHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClassHandler.cpp; sourceTree = "<group>"; };
+		FCBE21DD221AC529004E9C6F /* TypeMapping.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TypeMapping.cpp; sourceTree = "<group>"; };
+		FCBE21DE221AC529004E9C6F /* TypeMapping.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TypeMapping.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		068C77A4FF7C44AB877B3A7D /* docker-build-run */ = {
+			isa = PBXGroup;
+			children = (
+				A3E73F0C56194352BC65EF60 /* CMake Rules */,
+				17409E10ED1A4B6488FD0F4E /* CMakeLists.txt */,
+			);
+			name = "docker-build-run";
+			sourceTree = "<group>";
+		};
+		0ACC8A6ED85D4E3CBDC8B012 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		15051B518C8A47B3A238D52E /* insights */ = {
+			isa = PBXGroup;
+			children = (
+				C336E9F62CA04C09BEA8F394 /* Source Files */,
+				5C4330000C534A4A8FA028F8 /* CMakeLists.txt */,
+			);
+			name = insights;
+			sourceTree = "<group>";
+		};
+		1E41E98BF6EA4A8C81CEE2B3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3F455C2826CE405E8F2FA750 /* docker-build */ = {
+			isa = PBXGroup;
+			children = (
+				EC007D40669848C7AF9FED16 /* CMake Rules */,
+				526ABFB957874E349542785E /* CMakeLists.txt */,
+			);
+			name = "docker-build";
+			sourceTree = "<group>";
+		};
+		41901C8999B940B68FFFBFAA /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				0ACC8A6ED85D4E3CBDC8B012 /* CMake Rules */,
+				F6CF5243DF024D528DB3F2A1 /* CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		4E6DB81C756A4649A2FE27EE /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				E27C0941548B42EA91777668 /* CMake Rules */,
+				D589837135AF4BD6AAC2A5F7 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		51B7F90D96D247BCB9D2EAD3 /* docker-build-container */ = {
+			isa = PBXGroup;
+			children = (
+				648D0974BC394C91ABCEE8D3 /* CMake Rules */,
+				192AB979639D4C9595B3AABE /* CMakeLists.txt */,
+			);
+			name = "docker-build-container";
+			sourceTree = "<group>";
+		};
+		5E95A4475C5D4679A957A84C /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				C1F94621CEC242048470C67D /* CMake Rules */,
+				0F586D6188D6401D8125A0BA /* CMakeLists.txt */,
+			);
+			name = tests;
+			sourceTree = "<group>";
+		};
+		648D0974BC394C91ABCEE8D3 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		7B1BFBCFDABA412FAF62B7CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				964C2751FD1E4807B7E9803F /* insights */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A070ED46818B4E54AD6401A2 = {
+			isa = PBXGroup;
+			children = (
+				BE86C0CA99CF42928DE50310 /* Sources */,
+				1E41E98BF6EA4A8C81CEE2B3 /* Resources */,
+				7B1BFBCFDABA412FAF62B7CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3E73F0C56194352BC65EF60 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		BE86C0CA99CF42928DE50310 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				41901C8999B940B68FFFBFAA /* ZERO_CHECK */,
+				4E6DB81C756A4649A2FE27EE /* ALL_BUILD */,
+				068C77A4FF7C44AB877B3A7D /* docker-build-run */,
+				15051B518C8A47B3A238D52E /* insights */,
+				3F455C2826CE405E8F2FA750 /* docker-build */,
+				51B7F90D96D247BCB9D2EAD3 /* docker-build-container */,
+				CC48F8281DB145D18EDFA918 /* tests-docker */,
+				5E95A4475C5D4679A957A84C /* tests */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		C1F94621CEC242048470C67D /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		C336E9F62CA04C09BEA8F394 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCBE21D2221917FB004E9C6F /* ClassHandler.cpp */,
+				B0E8E3B5406A4BD8B3BAB5F2 /* AutoStmtHandler.cpp */,
+				E0F240C8D935439BAB51582C /* CodeGenerator.cpp */,
+				18A8C012EBF94F429F6C7B80 /* CompilerGeneratedHandler.cpp */,
+				324B9289F3F5495B97094DAC /* DPrint.cpp */,
+				CB5832D9394A407E87F603FC /* FunctionDeclHandler.cpp */,
+				7C399CF72E3F437EAE8E5D30 /* GlobalVariableHandler.cpp */,
+				ABADC56B51914B81BE0C3D4F /* ImplicitCastHandler.cpp */,
+				CF9CE64E84ED462096B97E86 /* Insights.cpp */,
+				651D556B7169487EAFD98C7D /* InsightsBase.cpp */,
+				B767EC38069D4C02BC3C7A36 /* InsightsHelpers.cpp */,
+				5E3B7682686C4F26AE513858 /* OutputFormatHelper.cpp */,
+				6A3F2061A0E24A2284CD6F69 /* StaticAssertHandler.cpp */,
+				00208C6C7EF44DEFA828603C /* TemplateHandler.cpp */,
+				59C13DC9F45E4AB2991D072D /* UserDefinedLiteralHandler.cpp */,
+				FCBE21DD221AC529004E9C6F /* TypeMapping.cpp */,
+				FCBE21DE221AC529004E9C6F /* TypeMapping.hpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		CC48F8281DB145D18EDFA918 /* tests-docker */ = {
+			isa = PBXGroup;
+			children = (
+				D2682FCA12E64143B8FD9722 /* CMake Rules */,
+				2FF2658D111445CCA9C2B901 /* CMakeLists.txt */,
+			);
+			name = "tests-docker";
+			sourceTree = "<group>";
+		};
+		D2682FCA12E64143B8FD9722 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		E27C0941548B42EA91777668 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		EC007D40669848C7AF9FED16 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D60CDC5538B145E0A1E829E7 /* insights */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA11F6FD68614FE1A47F03B9 /* Build configuration list for PBXNativeTarget "insights" */;
+			buildPhases = (
+				5634B89AAA14446890AFC698 /* Sources */,
+				6E8ABD988BB2403DB30B7C8B /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27B6161160A647D68EFE921F /* PBXTargetDependency */,
+			);
+			name = insights;
+			productName = insights;
+			productReference = 964C2751FD1E4807B7E9803F /* insights */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5F2B81319B840079D4EE2FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 8909B3B1CA6547A481A12541 /* Build configuration list for PBXProject "cpp-insights" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A070ED46818B4E54AD6401A2;
+			projectDirPath = ../;
+			projectRoot = "";
+			targets = (
+				1E84CED6BAE04F23929A23D9 /* ALL_BUILD */,
+				E45C297F8FA248D690996756 /* ZERO_CHECK */,
+				542BF7B07FB64632B694A8FE /* docker-build */,
+				C1623425A6124A08AE47656B /* docker-build-container */,
+				7FFF624288984FD7A4DA7E6A /* docker-build-run */,
+				D60CDC5538B145E0A1E829E7 /* insights */,
+				BB8A99BF487A4118B5B53B45 /* tests */,
+				E16303FDC8AD4D3999B98910 /* tests-docker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34E47D16DEEE4E68B8F2B28D /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /git/cppinsights/build -f /git/cppinsights/build/CMakeScripts/tests_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		4C0A978BA97844DD93FEB423 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /git/cppinsights/build -f /git/cppinsights/build/CMakeScripts/tests-docker_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		64336C762021436887E30603 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /git/cppinsights/build -f /git/cppinsights/build/CMakeScripts/docker-build_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		6E8ABD988BB2403DB30B7C8B /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# make -C /git/cppinsights/build -f /git/cppinsights/build/CMakeScripts/insights_postBuildPhase.make$CONFIGURATION all\n";
+			showEnvVarsInLog = 0;
+		};
+		A803BB9557FF4157A96DF9C0 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /git/cppinsights/build -f /git/cppinsights/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		BAFBD15FFFDF418D99EFEBEE /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /git/cppinsights/build -f /git/cppinsights/build/CMakeScripts/docker-build-run_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		E1695C914AD64F16AC791720 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /git/cppinsights/build -f /git/cppinsights/build/CMakeScripts/docker-build-container_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		F8ECCD6842B74E4085A32C90 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /git/cppinsights/build -f /git/cppinsights/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5634B89AAA14446890AFC698 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBF85E2A8B1B4D648A13B0CC /* AutoStmtHandler.cpp in Sources */,
+				EB07062AB5EF488489836910 /* CodeGenerator.cpp in Sources */,
+				0DDEAB88F3F74F76A9BEF641 /* CompilerGeneratedHandler.cpp in Sources */,
+				652A0C69D37C4539B2ED24A9 /* DPrint.cpp in Sources */,
+				8B003DF2948445C1BD9F6BA7 /* FunctionDeclHandler.cpp in Sources */,
+				ABAEC84FD46647EDADC970A8 /* GlobalVariableHandler.cpp in Sources */,
+				E465BBEF22CD4FFBB85E8B9B /* ImplicitCastHandler.cpp in Sources */,
+				BDACD9595F554F47BCB1ABEF /* Insights.cpp in Sources */,
+				0D0FF62020774D96AC7049D4 /* InsightsBase.cpp in Sources */,
+				37DCDB923FDA4FBFB22D84DC /* InsightsHelpers.cpp in Sources */,
+				FCBE21D322191803004E9C6F /* ClassHandler.cpp in Sources */,
+				875F45C897E645AB98DC9BA4 /* OutputFormatHelper.cpp in Sources */,
+				C53C268BB93C425C9D6F2604 /* StaticAssertHandler.cpp in Sources */,
+				7F83A2A64F7C44528851F053 /* TemplateHandler.cpp in Sources */,
+				FCBE21DF221AC529004E9C6F /* TypeMapping.cpp in Sources */,
+				54354651134445C3A492B046 /* UserDefinedLiteralHandler.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C7C8A5A4CA04B9B96B37D5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1623425A6124A08AE47656B /* docker-build-container */;
+			targetProxy = 9B2B2BEA5B3944C88F729E04 /* PBXContainerItemProxy */;
+		};
+		27B6161160A647D68EFE921F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E45C297F8FA248D690996756 /* ZERO_CHECK */;
+			targetProxy = 6E04D67849DC4E5A94899FC4 /* PBXContainerItemProxy */;
+		};
+		75E41A21E1E1473292E81A59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E45C297F8FA248D690996756 /* ZERO_CHECK */;
+			targetProxy = F74F63D31D2B401292556C5D /* PBXContainerItemProxy */;
+		};
+		97F365129429453C931D3DE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D60CDC5538B145E0A1E829E7 /* insights */;
+			targetProxy = 04F93B5A7B764F23B97820AA /* PBXContainerItemProxy */;
+		};
+		B158D6AF2B364458A2CF0408 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C1623425A6124A08AE47656B /* docker-build-container */;
+			targetProxy = 7538DED29F7A4DC6B20D2438 /* PBXContainerItemProxy */;
+		};
+		B871461898A74D7AB37121CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E45C297F8FA248D690996756 /* ZERO_CHECK */;
+			targetProxy = 4BB6250EBB024E7CA6DA28E3 /* PBXContainerItemProxy */;
+		};
+		DB752BD37AF144889D66A1EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E45C297F8FA248D690996756 /* ZERO_CHECK */;
+			targetProxy = CD5E5BCCA507483B8BBC3BDB /* PBXContainerItemProxy */;
+		};
+		E226062D1D9C46F3862E7AC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E45C297F8FA248D690996756 /* ZERO_CHECK */;
+			targetProxy = 581C2FE06056463DB3170B0D /* PBXContainerItemProxy */;
+		};
+		E736C37AD7824622851AEE24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E45C297F8FA248D690996756 /* ZERO_CHECK */;
+			targetProxy = DD71504A93864B4CBAE026FF /* PBXContainerItemProxy */;
+		};
+		FCFD053765EC479D9CC9E9B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E45C297F8FA248D690996756 /* ZERO_CHECK */;
+			targetProxy = 7119733E07BD4EBB9842A700 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1B1887EE492F471C8FABF7DC /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		1DA0C7FFC3A04B2E864094DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = tests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		202D485842DD4E01976A730B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		20AC0DE75CC246F599756960 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "tests-docker";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		244AFB443BB84E6782C376AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "docker-build-run";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		293DAC42FBD346748A03DA2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "docker-build-run";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		2F4E8D7F89944E7E993F6E68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		31465D7023374DBBBB56E739 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /git/cppinsights/build/build;
+			};
+			name = RelWithDebInfo;
+		};
+		343FD21779D2422CA7D47033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "tests-docker";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		3ADB05EE5AB249D6AD987F73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /git/cppinsights/build/build;
+			};
+			name = Debug;
+		};
+		3CCDC20941E8482EB87BA2B7 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "tests-docker";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		45E1DB5E3A854E4EAD9920B7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "docker-build-container";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		622DCB93A5EC4140AA09AAB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "tests-docker";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		74ADEBEF4582413CB2BED5AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "docker-build";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		78420BF5B7574E4490E6E642 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "docker-build";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		809DC39B76E648F9B52A1A3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/Cellar/llvm/7.0.1/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/llvm/7.0.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/Cellar/llvm/7.0.1/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-isystem/usr/local/Cellar/llvm/7.0.1/include",
+					"-stdlib=libc++",
+					"-fPIC",
+					"-fvisibility-inlines-hidden",
+					"-Werror=date-time",
+					"-Werror=unguarded-availability-new",
+					"-std=c++11",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+					"-Wwrite-strings",
+					"-Wcast-qual",
+					"-Wmissing-field-initializers",
+					"-pedantic",
+					"-Wno-long-long",
+					"-Wcovered-switch-default",
+					"-Wnon-virtual-dtor",
+					"-Wdelete-non-virtual-dtor",
+					"-Wstring-conversion",
+					"-DNDEBUG",
+					"-D__STDC_CONSTANT_MACROS",
+					"-D__STDC_FORMAT_MACROS",
+					"-D__STDC_LIMIT_MACROS",
+					"-std=c++1z",
+					"-Wextra",
+					"-Wold-style-cast",
+					"-Werror",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lclangTooling",
+					"-lclangASTMatchers",
+					"-L/usr/local/Cellar/llvm/7.0.1/lib",
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lclangFrontend",
+					"-lclangDriver",
+					"-lclangSerialization",
+					"-lclangParse",
+					"-lclangSema",
+					"-lclangAnalysis",
+					"-lclangEdit",
+					"-lclangAST",
+					"-lclangLex",
+					"-lclangBasic",
+					"-lclangRewrite",
+					"-lLLVMLTO",
+					"-lLLVMPasses",
+					"-lLLVMObjCARCOpts",
+					"-lLLVMSymbolize",
+					"-lLLVMDebugInfoPDB",
+					"-lLLVMDebugInfoDWARF",
+					"-lLLVMMIRParser",
+					"-lLLVMFuzzMutate",
+					"-lLLVMCoverage",
+					"-lLLVMTableGen",
+					"-lLLVMDlltoolDriver",
+					"-lLLVMOrcJIT",
+					"-lLLVMXCoreDisassembler",
+					"-lLLVMXCoreCodeGen",
+					"-lLLVMXCoreDesc",
+					"-lLLVMXCoreInfo",
+					"-lLLVMXCoreAsmPrinter",
+					"-lLLVMSystemZDisassembler",
+					"-lLLVMSystemZCodeGen",
+					"-lLLVMSystemZAsmParser",
+					"-lLLVMSystemZDesc",
+					"-lLLVMSystemZInfo",
+					"-lLLVMSystemZAsmPrinter",
+					"-lLLVMSparcDisassembler",
+					"-lLLVMSparcCodeGen",
+					"-lLLVMSparcAsmParser",
+					"-lLLVMSparcDesc",
+					"-lLLVMSparcInfo",
+					"-lLLVMSparcAsmPrinter",
+					"-lLLVMPowerPCDisassembler",
+					"-lLLVMPowerPCCodeGen",
+					"-lLLVMPowerPCAsmParser",
+					"-lLLVMPowerPCDesc",
+					"-lLLVMPowerPCInfo",
+					"-lLLVMPowerPCAsmPrinter",
+					"-lLLVMNVPTXCodeGen",
+					"-lLLVMNVPTXDesc",
+					"-lLLVMNVPTXInfo",
+					"-lLLVMNVPTXAsmPrinter",
+					"-lLLVMMSP430CodeGen",
+					"-lLLVMMSP430Desc",
+					"-lLLVMMSP430Info",
+					"-lLLVMMSP430AsmPrinter",
+					"-lLLVMMipsDisassembler",
+					"-lLLVMMipsCodeGen",
+					"-lLLVMMipsAsmParser",
+					"-lLLVMMipsDesc",
+					"-lLLVMMipsInfo",
+					"-lLLVMMipsAsmPrinter",
+					"-lLLVMLanaiDisassembler",
+					"-lLLVMLanaiCodeGen",
+					"-lLLVMLanaiAsmParser",
+					"-lLLVMLanaiDesc",
+					"-lLLVMLanaiAsmPrinter",
+					"-lLLVMLanaiInfo",
+					"-lLLVMHexagonDisassembler",
+					"-lLLVMHexagonCodeGen",
+					"-lLLVMHexagonAsmParser",
+					"-lLLVMHexagonDesc",
+					"-lLLVMHexagonInfo",
+					"-lLLVMBPFDisassembler",
+					"-lLLVMBPFCodeGen",
+					"-lLLVMBPFAsmParser",
+					"-lLLVMBPFDesc",
+					"-lLLVMBPFInfo",
+					"-lLLVMBPFAsmPrinter",
+					"-lLLVMARMDisassembler",
+					"-lLLVMARMCodeGen",
+					"-lLLVMARMAsmParser",
+					"-lLLVMARMDesc",
+					"-lLLVMARMInfo",
+					"-lLLVMARMAsmPrinter",
+					"-lLLVMARMUtils",
+					"-lLLVMAMDGPUDisassembler",
+					"-lLLVMAMDGPUCodeGen",
+					"-lLLVMAMDGPUAsmParser",
+					"-lLLVMAMDGPUDesc",
+					"-lLLVMAMDGPUInfo",
+					"-lLLVMAMDGPUAsmPrinter",
+					"-lLLVMAMDGPUUtils",
+					"-lLLVMAArch64Disassembler",
+					"-lLLVMAArch64CodeGen",
+					"-lLLVMAArch64AsmParser",
+					"-lLLVMAArch64Desc",
+					"-lLLVMAArch64Info",
+					"-lLLVMAArch64AsmPrinter",
+					"-lLLVMAArch64Utils",
+					"-lLLVMObjectYAML",
+					"-lLLVMLibDriver",
+					"-lLLVMOption",
+					"-lLLVMWindowsManifest",
+					"-lLLVMX86Disassembler",
+					"-lLLVMX86AsmParser",
+					"-lLLVMX86CodeGen",
+					"-lLLVMGlobalISel",
+					"-lLLVMSelectionDAG",
+					"-lLLVMAsmPrinter",
+					"-lLLVMX86Desc",
+					"-lLLVMMCDisassembler",
+					"-lLLVMX86Info",
+					"-lLLVMX86AsmPrinter",
+					"-lLLVMX86Utils",
+					"-lLLVMMCJIT",
+					"-lLLVMLineEditor",
+					"-lLLVMInterpreter",
+					"-lLLVMExecutionEngine",
+					"-lLLVMRuntimeDyld",
+					"-lLLVMCodeGen",
+					"-lLLVMTarget",
+					"-lLLVMCoroutines",
+					"-lLLVMipo",
+					"-lLLVMInstrumentation",
+					"-lLLVMVectorize",
+					"-lLLVMScalarOpts",
+					"-lLLVMLinker",
+					"-lLLVMIRReader",
+					"-lLLVMAsmParser",
+					"-lLLVMInstCombine",
+					"-lLLVMBitWriter",
+					"-lLLVMAggressiveInstCombine",
+					"-lLLVMTransformUtils",
+					"-lLLVMAnalysis",
+					"-lLLVMProfileData",
+					"-lLLVMObject",
+					"-lLLVMMCParser",
+					"-lLLVMMC",
+					"-lLLVMDebugInfoCodeView",
+					"-lLLVMDebugInfoMSF",
+					"-lLLVMBitReader",
+					"-lLLVMCore",
+					"-lLLVMBinaryFormat",
+					"-lLLVMSupport",
+					"-lLLVMDemangle",
+					"-lz",
+					"-lcurses",
+					"-lm",
+					"-lxml2",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = insights;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		878441E2E44C42C38FD121CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "docker-build";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		8A89959B35474FB297C95F9F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		8C8AA83F755446348DEBA02C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = tests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		8E24B99568764076AAF0A2BF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = tests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		8FD3A32D3B1C45FFA492C566 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "docker-build-container";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		95BAEF8AD58647AF8ADD8A76 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/Cellar/llvm/7.0.1/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/llvm/7.0.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/Cellar/llvm/7.0.1/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"-isystem/usr/local/Cellar/llvm/7.0.1/include",
+					"-stdlib=libc++",
+					"-fPIC",
+					"-fvisibility-inlines-hidden",
+					"-Werror=date-time",
+					"-Werror=unguarded-availability-new",
+					"-std=c++11",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+					"-Wwrite-strings",
+					"-Wcast-qual",
+					"-Wmissing-field-initializers",
+					"-pedantic",
+					"-Wno-long-long",
+					"-Wcovered-switch-default",
+					"-Wnon-virtual-dtor",
+					"-Wdelete-non-virtual-dtor",
+					"-Wstring-conversion",
+					"-DNDEBUG",
+					"-D__STDC_CONSTANT_MACROS",
+					"-D__STDC_FORMAT_MACROS",
+					"-D__STDC_LIMIT_MACROS",
+					"-std=c++1z",
+					"-Wextra",
+					"-Wold-style-cast",
+					"-Werror",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lclangTooling",
+					"-lclangASTMatchers",
+					"-L/usr/local/Cellar/llvm/7.0.1/lib",
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lclangFrontend",
+					"-lclangDriver",
+					"-lclangSerialization",
+					"-lclangParse",
+					"-lclangSema",
+					"-lclangAnalysis",
+					"-lclangEdit",
+					"-lclangAST",
+					"-lclangLex",
+					"-lclangBasic",
+					"-lclangRewrite",
+					"-lLLVMLTO",
+					"-lLLVMPasses",
+					"-lLLVMObjCARCOpts",
+					"-lLLVMSymbolize",
+					"-lLLVMDebugInfoPDB",
+					"-lLLVMDebugInfoDWARF",
+					"-lLLVMMIRParser",
+					"-lLLVMFuzzMutate",
+					"-lLLVMCoverage",
+					"-lLLVMTableGen",
+					"-lLLVMDlltoolDriver",
+					"-lLLVMOrcJIT",
+					"-lLLVMXCoreDisassembler",
+					"-lLLVMXCoreCodeGen",
+					"-lLLVMXCoreDesc",
+					"-lLLVMXCoreInfo",
+					"-lLLVMXCoreAsmPrinter",
+					"-lLLVMSystemZDisassembler",
+					"-lLLVMSystemZCodeGen",
+					"-lLLVMSystemZAsmParser",
+					"-lLLVMSystemZDesc",
+					"-lLLVMSystemZInfo",
+					"-lLLVMSystemZAsmPrinter",
+					"-lLLVMSparcDisassembler",
+					"-lLLVMSparcCodeGen",
+					"-lLLVMSparcAsmParser",
+					"-lLLVMSparcDesc",
+					"-lLLVMSparcInfo",
+					"-lLLVMSparcAsmPrinter",
+					"-lLLVMPowerPCDisassembler",
+					"-lLLVMPowerPCCodeGen",
+					"-lLLVMPowerPCAsmParser",
+					"-lLLVMPowerPCDesc",
+					"-lLLVMPowerPCInfo",
+					"-lLLVMPowerPCAsmPrinter",
+					"-lLLVMNVPTXCodeGen",
+					"-lLLVMNVPTXDesc",
+					"-lLLVMNVPTXInfo",
+					"-lLLVMNVPTXAsmPrinter",
+					"-lLLVMMSP430CodeGen",
+					"-lLLVMMSP430Desc",
+					"-lLLVMMSP430Info",
+					"-lLLVMMSP430AsmPrinter",
+					"-lLLVMMipsDisassembler",
+					"-lLLVMMipsCodeGen",
+					"-lLLVMMipsAsmParser",
+					"-lLLVMMipsDesc",
+					"-lLLVMMipsInfo",
+					"-lLLVMMipsAsmPrinter",
+					"-lLLVMLanaiDisassembler",
+					"-lLLVMLanaiCodeGen",
+					"-lLLVMLanaiAsmParser",
+					"-lLLVMLanaiDesc",
+					"-lLLVMLanaiAsmPrinter",
+					"-lLLVMLanaiInfo",
+					"-lLLVMHexagonDisassembler",
+					"-lLLVMHexagonCodeGen",
+					"-lLLVMHexagonAsmParser",
+					"-lLLVMHexagonDesc",
+					"-lLLVMHexagonInfo",
+					"-lLLVMBPFDisassembler",
+					"-lLLVMBPFCodeGen",
+					"-lLLVMBPFAsmParser",
+					"-lLLVMBPFDesc",
+					"-lLLVMBPFInfo",
+					"-lLLVMBPFAsmPrinter",
+					"-lLLVMARMDisassembler",
+					"-lLLVMARMCodeGen",
+					"-lLLVMARMAsmParser",
+					"-lLLVMARMDesc",
+					"-lLLVMARMInfo",
+					"-lLLVMARMAsmPrinter",
+					"-lLLVMARMUtils",
+					"-lLLVMAMDGPUDisassembler",
+					"-lLLVMAMDGPUCodeGen",
+					"-lLLVMAMDGPUAsmParser",
+					"-lLLVMAMDGPUDesc",
+					"-lLLVMAMDGPUInfo",
+					"-lLLVMAMDGPUAsmPrinter",
+					"-lLLVMAMDGPUUtils",
+					"-lLLVMAArch64Disassembler",
+					"-lLLVMAArch64CodeGen",
+					"-lLLVMAArch64AsmParser",
+					"-lLLVMAArch64Desc",
+					"-lLLVMAArch64Info",
+					"-lLLVMAArch64AsmPrinter",
+					"-lLLVMAArch64Utils",
+					"-lLLVMObjectYAML",
+					"-lLLVMLibDriver",
+					"-lLLVMOption",
+					"-lLLVMWindowsManifest",
+					"-lLLVMX86Disassembler",
+					"-lLLVMX86AsmParser",
+					"-lLLVMX86CodeGen",
+					"-lLLVMGlobalISel",
+					"-lLLVMSelectionDAG",
+					"-lLLVMAsmPrinter",
+					"-lLLVMX86Desc",
+					"-lLLVMMCDisassembler",
+					"-lLLVMX86Info",
+					"-lLLVMX86AsmPrinter",
+					"-lLLVMX86Utils",
+					"-lLLVMMCJIT",
+					"-lLLVMLineEditor",
+					"-lLLVMInterpreter",
+					"-lLLVMExecutionEngine",
+					"-lLLVMRuntimeDyld",
+					"-lLLVMCodeGen",
+					"-lLLVMTarget",
+					"-lLLVMCoroutines",
+					"-lLLVMipo",
+					"-lLLVMInstrumentation",
+					"-lLLVMVectorize",
+					"-lLLVMScalarOpts",
+					"-lLLVMLinker",
+					"-lLLVMIRReader",
+					"-lLLVMAsmParser",
+					"-lLLVMInstCombine",
+					"-lLLVMBitWriter",
+					"-lLLVMAggressiveInstCombine",
+					"-lLLVMTransformUtils",
+					"-lLLVMAnalysis",
+					"-lLLVMProfileData",
+					"-lLLVMObject",
+					"-lLLVMMCParser",
+					"-lLLVMMC",
+					"-lLLVMDebugInfoCodeView",
+					"-lLLVMDebugInfoMSF",
+					"-lLLVMBitReader",
+					"-lLLVMCore",
+					"-lLLVMBinaryFormat",
+					"-lLLVMSupport",
+					"-lLLVMDemangle",
+					"-lz",
+					"-lcurses",
+					"-lm",
+					"-lxml2",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = insights;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		A48DAFC8F858496BB3C91D56 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "docker-build-run";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		AEDC791E19BA4B9888B9A46F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		B9767F0DEE224F34BC1CD834 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "docker-build-container";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		BCFADB43BD4F4F4E90F57309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "docker-build-container";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		BD875D527E68421C9216BC19 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "docker-build";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		C29B82FACAF04D5DA9B49816 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/Cellar/llvm/7.0.1/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/llvm/7.0.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/Cellar/llvm/7.0.1/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"-isystem/usr/local/Cellar/llvm/7.0.1/include",
+					"-stdlib=libc++",
+					"-fPIC",
+					"-fvisibility-inlines-hidden",
+					"-Werror=date-time",
+					"-Werror=unguarded-availability-new",
+					"-std=c++11",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+					"-Wwrite-strings",
+					"-Wcast-qual",
+					"-Wmissing-field-initializers",
+					"-pedantic",
+					"-Wno-long-long",
+					"-Wcovered-switch-default",
+					"-Wnon-virtual-dtor",
+					"-Wdelete-non-virtual-dtor",
+					"-Wstring-conversion",
+					"-DNDEBUG",
+					"-D__STDC_CONSTANT_MACROS",
+					"-D__STDC_FORMAT_MACROS",
+					"-D__STDC_LIMIT_MACROS",
+					"-std=c++1z",
+					"-Wextra",
+					"-Wold-style-cast",
+					"-Werror",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lclangTooling",
+					"-lclangASTMatchers",
+					"-L/usr/local/Cellar/llvm/7.0.1/lib",
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lclangFrontend",
+					"-lclangDriver",
+					"-lclangSerialization",
+					"-lclangParse",
+					"-lclangSema",
+					"-lclangAnalysis",
+					"-lclangEdit",
+					"-lclangAST",
+					"-lclangLex",
+					"-lclangBasic",
+					"-lclangRewrite",
+					"-lLLVMLTO",
+					"-lLLVMPasses",
+					"-lLLVMObjCARCOpts",
+					"-lLLVMSymbolize",
+					"-lLLVMDebugInfoPDB",
+					"-lLLVMDebugInfoDWARF",
+					"-lLLVMMIRParser",
+					"-lLLVMFuzzMutate",
+					"-lLLVMCoverage",
+					"-lLLVMTableGen",
+					"-lLLVMDlltoolDriver",
+					"-lLLVMOrcJIT",
+					"-lLLVMXCoreDisassembler",
+					"-lLLVMXCoreCodeGen",
+					"-lLLVMXCoreDesc",
+					"-lLLVMXCoreInfo",
+					"-lLLVMXCoreAsmPrinter",
+					"-lLLVMSystemZDisassembler",
+					"-lLLVMSystemZCodeGen",
+					"-lLLVMSystemZAsmParser",
+					"-lLLVMSystemZDesc",
+					"-lLLVMSystemZInfo",
+					"-lLLVMSystemZAsmPrinter",
+					"-lLLVMSparcDisassembler",
+					"-lLLVMSparcCodeGen",
+					"-lLLVMSparcAsmParser",
+					"-lLLVMSparcDesc",
+					"-lLLVMSparcInfo",
+					"-lLLVMSparcAsmPrinter",
+					"-lLLVMPowerPCDisassembler",
+					"-lLLVMPowerPCCodeGen",
+					"-lLLVMPowerPCAsmParser",
+					"-lLLVMPowerPCDesc",
+					"-lLLVMPowerPCInfo",
+					"-lLLVMPowerPCAsmPrinter",
+					"-lLLVMNVPTXCodeGen",
+					"-lLLVMNVPTXDesc",
+					"-lLLVMNVPTXInfo",
+					"-lLLVMNVPTXAsmPrinter",
+					"-lLLVMMSP430CodeGen",
+					"-lLLVMMSP430Desc",
+					"-lLLVMMSP430Info",
+					"-lLLVMMSP430AsmPrinter",
+					"-lLLVMMipsDisassembler",
+					"-lLLVMMipsCodeGen",
+					"-lLLVMMipsAsmParser",
+					"-lLLVMMipsDesc",
+					"-lLLVMMipsInfo",
+					"-lLLVMMipsAsmPrinter",
+					"-lLLVMLanaiDisassembler",
+					"-lLLVMLanaiCodeGen",
+					"-lLLVMLanaiAsmParser",
+					"-lLLVMLanaiDesc",
+					"-lLLVMLanaiAsmPrinter",
+					"-lLLVMLanaiInfo",
+					"-lLLVMHexagonDisassembler",
+					"-lLLVMHexagonCodeGen",
+					"-lLLVMHexagonAsmParser",
+					"-lLLVMHexagonDesc",
+					"-lLLVMHexagonInfo",
+					"-lLLVMBPFDisassembler",
+					"-lLLVMBPFCodeGen",
+					"-lLLVMBPFAsmParser",
+					"-lLLVMBPFDesc",
+					"-lLLVMBPFInfo",
+					"-lLLVMBPFAsmPrinter",
+					"-lLLVMARMDisassembler",
+					"-lLLVMARMCodeGen",
+					"-lLLVMARMAsmParser",
+					"-lLLVMARMDesc",
+					"-lLLVMARMInfo",
+					"-lLLVMARMAsmPrinter",
+					"-lLLVMARMUtils",
+					"-lLLVMAMDGPUDisassembler",
+					"-lLLVMAMDGPUCodeGen",
+					"-lLLVMAMDGPUAsmParser",
+					"-lLLVMAMDGPUDesc",
+					"-lLLVMAMDGPUInfo",
+					"-lLLVMAMDGPUAsmPrinter",
+					"-lLLVMAMDGPUUtils",
+					"-lLLVMAArch64Disassembler",
+					"-lLLVMAArch64CodeGen",
+					"-lLLVMAArch64AsmParser",
+					"-lLLVMAArch64Desc",
+					"-lLLVMAArch64Info",
+					"-lLLVMAArch64AsmPrinter",
+					"-lLLVMAArch64Utils",
+					"-lLLVMObjectYAML",
+					"-lLLVMLibDriver",
+					"-lLLVMOption",
+					"-lLLVMWindowsManifest",
+					"-lLLVMX86Disassembler",
+					"-lLLVMX86AsmParser",
+					"-lLLVMX86CodeGen",
+					"-lLLVMGlobalISel",
+					"-lLLVMSelectionDAG",
+					"-lLLVMAsmPrinter",
+					"-lLLVMX86Desc",
+					"-lLLVMMCDisassembler",
+					"-lLLVMX86Info",
+					"-lLLVMX86AsmPrinter",
+					"-lLLVMX86Utils",
+					"-lLLVMMCJIT",
+					"-lLLVMLineEditor",
+					"-lLLVMInterpreter",
+					"-lLLVMExecutionEngine",
+					"-lLLVMRuntimeDyld",
+					"-lLLVMCodeGen",
+					"-lLLVMTarget",
+					"-lLLVMCoroutines",
+					"-lLLVMipo",
+					"-lLLVMInstrumentation",
+					"-lLLVMVectorize",
+					"-lLLVMScalarOpts",
+					"-lLLVMLinker",
+					"-lLLVMIRReader",
+					"-lLLVMAsmParser",
+					"-lLLVMInstCombine",
+					"-lLLVMBitWriter",
+					"-lLLVMAggressiveInstCombine",
+					"-lLLVMTransformUtils",
+					"-lLLVMAnalysis",
+					"-lLLVMProfileData",
+					"-lLLVMObject",
+					"-lLLVMMCParser",
+					"-lLLVMMC",
+					"-lLLVMDebugInfoCodeView",
+					"-lLLVMDebugInfoMSF",
+					"-lLLVMBitReader",
+					"-lLLVMCore",
+					"-lLLVMBinaryFormat",
+					"-lLLVMSupport",
+					"-lLLVMDemangle",
+					"-lz",
+					"-lcurses",
+					"-lm",
+					"-lxml2",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = insights;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		C57070E76B4E453C8929ED2F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		C9E810968A5144D0A254CDB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/Cellar/llvm/7.0.1/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/Cellar/llvm/7.0.1/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/Cellar/llvm/7.0.1/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"-isystem/usr/local/Cellar/llvm/7.0.1/include",
+					"-stdlib=libc++",
+					"-fPIC",
+					"-fvisibility-inlines-hidden",
+					"-Werror=date-time",
+					"-Werror=unguarded-availability-new",
+					"-std=c++11",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+					"-Wwrite-strings",
+					"-Wcast-qual",
+					"-Wmissing-field-initializers",
+					"-pedantic",
+					"-Wno-long-long",
+					"-Wcovered-switch-default",
+					"-Wnon-virtual-dtor",
+					"-Wdelete-non-virtual-dtor",
+					"-Wstring-conversion",
+					"-DNDEBUG",
+					"-D__STDC_CONSTANT_MACROS",
+					"-D__STDC_FORMAT_MACROS",
+					"-D__STDC_LIMIT_MACROS",
+					"-std=c++1z",
+					"-Wextra",
+					"-Wold-style-cast",
+					"-Werror",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lclangTooling",
+					"-lclangASTMatchers",
+					"-L/usr/local/Cellar/llvm/7.0.1/lib",
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lclangFrontend",
+					"-lclangDriver",
+					"-lclangSerialization",
+					"-lclangParse",
+					"-lclangSema",
+					"-lclangAnalysis",
+					"-lclangEdit",
+					"-lclangAST",
+					"-lclangLex",
+					"-lclangBasic",
+					"-lclangRewrite",
+					"-lLLVMLTO",
+					"-lLLVMPasses",
+					"-lLLVMObjCARCOpts",
+					"-lLLVMSymbolize",
+					"-lLLVMDebugInfoPDB",
+					"-lLLVMDebugInfoDWARF",
+					"-lLLVMMIRParser",
+					"-lLLVMFuzzMutate",
+					"-lLLVMCoverage",
+					"-lLLVMTableGen",
+					"-lLLVMDlltoolDriver",
+					"-lLLVMOrcJIT",
+					"-lLLVMXCoreDisassembler",
+					"-lLLVMXCoreCodeGen",
+					"-lLLVMXCoreDesc",
+					"-lLLVMXCoreInfo",
+					"-lLLVMXCoreAsmPrinter",
+					"-lLLVMSystemZDisassembler",
+					"-lLLVMSystemZCodeGen",
+					"-lLLVMSystemZAsmParser",
+					"-lLLVMSystemZDesc",
+					"-lLLVMSystemZInfo",
+					"-lLLVMSystemZAsmPrinter",
+					"-lLLVMSparcDisassembler",
+					"-lLLVMSparcCodeGen",
+					"-lLLVMSparcAsmParser",
+					"-lLLVMSparcDesc",
+					"-lLLVMSparcInfo",
+					"-lLLVMSparcAsmPrinter",
+					"-lLLVMPowerPCDisassembler",
+					"-lLLVMPowerPCCodeGen",
+					"-lLLVMPowerPCAsmParser",
+					"-lLLVMPowerPCDesc",
+					"-lLLVMPowerPCInfo",
+					"-lLLVMPowerPCAsmPrinter",
+					"-lLLVMNVPTXCodeGen",
+					"-lLLVMNVPTXDesc",
+					"-lLLVMNVPTXInfo",
+					"-lLLVMNVPTXAsmPrinter",
+					"-lLLVMMSP430CodeGen",
+					"-lLLVMMSP430Desc",
+					"-lLLVMMSP430Info",
+					"-lLLVMMSP430AsmPrinter",
+					"-lLLVMMipsDisassembler",
+					"-lLLVMMipsCodeGen",
+					"-lLLVMMipsAsmParser",
+					"-lLLVMMipsDesc",
+					"-lLLVMMipsInfo",
+					"-lLLVMMipsAsmPrinter",
+					"-lLLVMLanaiDisassembler",
+					"-lLLVMLanaiCodeGen",
+					"-lLLVMLanaiAsmParser",
+					"-lLLVMLanaiDesc",
+					"-lLLVMLanaiAsmPrinter",
+					"-lLLVMLanaiInfo",
+					"-lLLVMHexagonDisassembler",
+					"-lLLVMHexagonCodeGen",
+					"-lLLVMHexagonAsmParser",
+					"-lLLVMHexagonDesc",
+					"-lLLVMHexagonInfo",
+					"-lLLVMBPFDisassembler",
+					"-lLLVMBPFCodeGen",
+					"-lLLVMBPFAsmParser",
+					"-lLLVMBPFDesc",
+					"-lLLVMBPFInfo",
+					"-lLLVMBPFAsmPrinter",
+					"-lLLVMARMDisassembler",
+					"-lLLVMARMCodeGen",
+					"-lLLVMARMAsmParser",
+					"-lLLVMARMDesc",
+					"-lLLVMARMInfo",
+					"-lLLVMARMAsmPrinter",
+					"-lLLVMARMUtils",
+					"-lLLVMAMDGPUDisassembler",
+					"-lLLVMAMDGPUCodeGen",
+					"-lLLVMAMDGPUAsmParser",
+					"-lLLVMAMDGPUDesc",
+					"-lLLVMAMDGPUInfo",
+					"-lLLVMAMDGPUAsmPrinter",
+					"-lLLVMAMDGPUUtils",
+					"-lLLVMAArch64Disassembler",
+					"-lLLVMAArch64CodeGen",
+					"-lLLVMAArch64AsmParser",
+					"-lLLVMAArch64Desc",
+					"-lLLVMAArch64Info",
+					"-lLLVMAArch64AsmPrinter",
+					"-lLLVMAArch64Utils",
+					"-lLLVMObjectYAML",
+					"-lLLVMLibDriver",
+					"-lLLVMOption",
+					"-lLLVMWindowsManifest",
+					"-lLLVMX86Disassembler",
+					"-lLLVMX86AsmParser",
+					"-lLLVMX86CodeGen",
+					"-lLLVMGlobalISel",
+					"-lLLVMSelectionDAG",
+					"-lLLVMAsmPrinter",
+					"-lLLVMX86Desc",
+					"-lLLVMMCDisassembler",
+					"-lLLVMX86Info",
+					"-lLLVMX86AsmPrinter",
+					"-lLLVMX86Utils",
+					"-lLLVMMCJIT",
+					"-lLLVMLineEditor",
+					"-lLLVMInterpreter",
+					"-lLLVMExecutionEngine",
+					"-lLLVMRuntimeDyld",
+					"-lLLVMCodeGen",
+					"-lLLVMTarget",
+					"-lLLVMCoroutines",
+					"-lLLVMipo",
+					"-lLLVMInstrumentation",
+					"-lLLVMVectorize",
+					"-lLLVMScalarOpts",
+					"-lLLVMLinker",
+					"-lLLVMIRReader",
+					"-lLLVMAsmParser",
+					"-lLLVMInstCombine",
+					"-lLLVMBitWriter",
+					"-lLLVMAggressiveInstCombine",
+					"-lLLVMTransformUtils",
+					"-lLLVMAnalysis",
+					"-lLLVMProfileData",
+					"-lLLVMObject",
+					"-lLLVMMCParser",
+					"-lLLVMMC",
+					"-lLLVMDebugInfoCodeView",
+					"-lLLVMDebugInfoMSF",
+					"-lLLVMBitReader",
+					"-lLLVMCore",
+					"-lLLVMBinaryFormat",
+					"-lLLVMSupport",
+					"-lLLVMDemangle",
+					"-lz",
+					"-lcurses",
+					"-lm",
+					"-lxml2",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = insights;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		D1C2E41B56BE4B259A18EED0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "docker-build-run";
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		DE9EDF4B951445F2AA2A6504 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /git/cppinsights/build/build;
+			};
+			name = MinSizeRel;
+		};
+		E7EE009DDE414F5EAB890791 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		EAC8D100B0314B779BEE8574 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = tests;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		F2AF650653E142E6923DF628 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk;
+				SYMROOT = /git/cppinsights/build/build;
+			};
+			name = Release;
+		};
+		FFCAFEA17592493483A2EBE2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/llvm/7.0.1/include,
+					/git/cppinsights/.,
+					/git/cppinsights/build/generated,
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /git/cppinsights/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01811CA3FBC34CA39DDDF116 /* Build configuration list for PBXAggregateTarget "docker-build" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74ADEBEF4582413CB2BED5AF /* Debug */,
+				878441E2E44C42C38FD121CD /* Release */,
+				BD875D527E68421C9216BC19 /* MinSizeRel */,
+				78420BF5B7574E4490E6E642 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		0CF830E9510647E38F2FDBE7 /* Build configuration list for PBXAggregateTarget "tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC8D100B0314B779BEE8574 /* Debug */,
+				1DA0C7FFC3A04B2E864094DF /* Release */,
+				8C8AA83F755446348DEBA02C /* MinSizeRel */,
+				8E24B99568764076AAF0A2BF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1AB4AC2292B14E8AADF9F26A /* Build configuration list for PBXAggregateTarget "tests-docker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				622DCB93A5EC4140AA09AAB4 /* Debug */,
+				343FD21779D2422CA7D47033 /* Release */,
+				20AC0DE75CC246F599756960 /* MinSizeRel */,
+				3CCDC20941E8482EB87BA2B7 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		23E3C28D51BD4791B47D4ED6 /* Build configuration list for PBXAggregateTarget "docker-build-container" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCFADB43BD4F4F4E90F57309 /* Debug */,
+				B9767F0DEE224F34BC1CD834 /* Release */,
+				45E1DB5E3A854E4EAD9920B7 /* MinSizeRel */,
+				8FD3A32D3B1C45FFA492C566 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		747F79E72F09407FBFF64A54 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F4E8D7F89944E7E993F6E68 /* Debug */,
+				AEDC791E19BA4B9888B9A46F /* Release */,
+				C57070E76B4E453C8929ED2F /* MinSizeRel */,
+				FFCAFEA17592493483A2EBE2 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8909B3B1CA6547A481A12541 /* Build configuration list for PBXProject "cpp-insights" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3ADB05EE5AB249D6AD987F73 /* Debug */,
+				F2AF650653E142E6923DF628 /* Release */,
+				DE9EDF4B951445F2AA2A6504 /* MinSizeRel */,
+				31465D7023374DBBBB56E739 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D3FBCAB6C496474CA25826ED /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				202D485842DD4E01976A730B /* Debug */,
+				E7EE009DDE414F5EAB890791 /* Release */,
+				1B1887EE492F471C8FABF7DC /* MinSizeRel */,
+				8A89959B35474FB297C95F9F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D48338D302344701A1F066AF /* Build configuration list for PBXAggregateTarget "docker-build-run" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				293DAC42FBD346748A03DA2C /* Debug */,
+				244AFB443BB84E6782C376AF /* Release */,
+				D1C2E41B56BE4B259A18EED0 /* MinSizeRel */,
+				A48DAFC8F858496BB3C91D56 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DA11F6FD68614FE1A47F03B9 /* Build configuration list for PBXNativeTarget "insights" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				809DC39B76E648F9B52A1A3B /* Debug */,
+				C9E810968A5144D0A254CDB3 /* Release */,
+				95BAEF8AD58647AF8ADD8A76 /* MinSizeRel */,
+				C29B82FACAF04D5DA9B49816 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E5F2B81319B840079D4EE2FC /* Project object */;
+}
