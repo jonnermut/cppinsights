@@ -1371,7 +1371,7 @@ void CodeGenerator::InsertArg(const CXXThisExpr* stmt)
 {
     DPrint("thisExpr: imlicit=%d %s\n", stmt->isImplicit(), GetName(GetDesugarType(stmt->getType())));
 
-    mOutputFormatHelper.Append("this");
+    mOutputFormatHelper.Append("self");
 }
 //-----------------------------------------------------------------------------
 
@@ -1799,9 +1799,11 @@ void CodeGenerator::InsertArg(const FieldDecl* stmt)
     mOutputFormatHelper.Append("var "); // TODO - consts as let?
     mOutputFormatHelper.Append(GetTypeNameAsParameter(stmt->getType(), GetName(*stmt)));
 
+
+
     if(const auto* cxxRecordDecl = dyn_cast_or_null<CXXRecordDecl>(stmt->getParent())) {
         // Keep the inline init for aggregates, as we do not see it somewhere else.
-        if(cxxRecordDecl->isAggregate()) {
+        //if(cxxRecordDecl->isAggregate()) {
             const auto* initializer = stmt->getInClassInitializer();
             if(stmt->hasInClassInitializer() && initializer) {
                 if(ICIS_ListInit != stmt->getInClassInitStyle()) {
@@ -1810,7 +1812,7 @@ void CodeGenerator::InsertArg(const FieldDecl* stmt)
 
                 InsertArg(initializer);
             }
-        }
+        //}
     }
 
     mOutputFormatHelper.AppendNewLine(";");

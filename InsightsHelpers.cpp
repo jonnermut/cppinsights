@@ -11,6 +11,7 @@
 #include "DPrint.h"
 #include "InsightsStaticStrings.h"
 #include "OutputFormatHelper.h"
+#include "TypeMapping.hpp"
 //-----------------------------------------------------------------------------
 
 namespace clang::insights {
@@ -345,7 +346,7 @@ static bool TestPlainSubType(const QualType& t)
 }
 //-----------------------------------------------------------------------------
 
-std::string GetTypeNameAsParameter(const QualType& t, const std::string& varName, const Unqualified unqualified)
+std::string GetTypeNameAsParameter(const QualType& t, const std::string& varName, const Unqualified /*unqualified*/)
 {
     const bool isFunctionPointer = TestPlainSubType<LValueReferenceType, FunctionProtoType>(t);
     const bool isArrayRef        = TestPlainSubType<LValueReferenceType, ConstantArrayType>(t);
@@ -354,7 +355,7 @@ std::string GetTypeNameAsParameter(const QualType& t, const std::string& varName
     const auto pointerToArrayBaseType = isAutoType ? t->getContainedAutoType()->getDeducedType() : t;
     const bool isPointerToArray       = TestPlainSubType<PointerType, ConstantArrayType>(pointerToArrayBaseType);
 
-    std::string typeName = details::GetName(t, unqualified);
+    std::string typeName = GetSwiftName(t);
 
     // Sometimes we get char const[2]. If we directly insert the typename we end up with char const__var[2] which is not
     // a valid type name. Hence check for this condition and, if necessary, insert a space before __var.
