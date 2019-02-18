@@ -751,7 +751,17 @@ void CodeGenerator::InsertArg(const FunctionDecl* stmt)
         InsertArg(ctor);
     } else {
 
+        if (stmt->doesThisDeclarationHaveABody()) {
 
+            InsertAccessModifierAndNameWithReturnType(*stmt, SkipAccess::Yes);
+            mOutputFormatHelper.AppendNewLine();
+            InsertArg(stmt->getBody());
+            mOutputFormatHelper.AppendNewLine();
+            
+        }
+
+        /*
+         old code for CXXMethodDecl
 
         if (stmt->doesThisDeclarationHaveABody()) {
 
@@ -780,6 +790,7 @@ void CodeGenerator::InsertArg(const FunctionDecl* stmt)
 
             //mOutputFormatHelper.AppendNewLine(';');
         }
+         */
     }
 }
 //-----------------------------------------------------------------------------
@@ -1648,6 +1659,10 @@ void CodeGenerator::InsertArg(const CXXMethodDecl* stmt)
     initOutputFormatHelper.SetIndent(mOutputFormatHelper, OutputFormatHelper::SkipIndenting::Yes);
     CXXConstructorDecl* cxxInheritedCtorDecl{nullptr};
 
+    if(!stmt->isUserProvided()) {
+        return;
+    }
+
     // travers the ctor inline init statements first to find a potential CXXInheritedCtorInitExpr. This carries the name
     // and the type. The CXXMethodDecl above knows only the type.
     if(const auto* ctor = dyn_cast_or_null<CXXConstructorDecl>(stmt)) {
@@ -1679,8 +1694,30 @@ void CodeGenerator::InsertArg(const CXXMethodDecl* stmt)
         }
     }
 
-    InsertAccessModifierAndNameWithReturnType(*stmt, SkipAccess::Yes, cxxInheritedCtorDecl);
+    if (!stmt->doesThisDeclarationHaveABody())
+    {
+        for ( auto&& other: stmt->redecls () )
+        {
+            if (other->doesThisDeclarationHaveABody())
+            {
+                InsertAccessModifierAndNameWithReturnType(*other, SkipAccess::Yes, cxxInheritedCtorDecl);
 
+                mOutputFormatHelper.AppendNewLine();
+                InsertArg(other->getBody());
+                mOutputFormatHelper.AppendNewLine();
+
+                break;
+            }
+        }
+    }
+    else
+    {
+        if (stmt->isInlined())
+        {
+            InsertAccessModifierAndNameWithReturnType(*stmt, SkipAccess::Yes, cxxInheritedCtorDecl);
+        }
+    }
+    
     if(stmt->isDefaulted()) {
         mOutputFormatHelper.AppendNewLine(" = default;");
     } else if(stmt->isDeleted()) {
@@ -1759,6 +1796,7 @@ void CodeGenerator::InsertArg(const EnumConstantDecl* stmt)
 
 void CodeGenerator::InsertArg(const FieldDecl* stmt)
 {
+    mOutputFormatHelper.Append("var "); // TODO - consts as let?
     mOutputFormatHelper.Append(GetTypeNameAsParameter(stmt->getType(), GetName(*stmt)));
 
     if(const auto* cxxRecordDecl = dyn_cast_or_null<CXXRecordDecl>(stmt->getParent())) {
@@ -2001,6 +2039,7 @@ void CodeGenerator::InsertArg(const CXXRecordDecl* stmt)
         mOutputFormatHelper.AppendNewLine("template<>");
     }
 
+    mOutputFormatHelper.Append("open ");
     if(stmt->isClass()) {
         mOutputFormatHelper.Append(kwClassSpace);
 
@@ -2678,30 +2717,31 @@ void CodeGenerator::InsertAccessModifierAndNameWithReturnType(const FunctionDecl
     // temporary output to be able to handle a return value of array reference
     OutputFormatHelper outputFormatHelper{};
 
-    if(methodDecl) {
-        if(!isFirstCxxMethodDecl) {
-            const auto* parent = methodDecl->getParent();
-            outputFormatHelper.Append(parent->getNameAsString());
 
-            /* Handle a templated CXXMethod outside class which is _not_ specialized. */
-            if(const auto* ct = parent->getDescribedClassTemplate()) {
-                outputFormatHelper.Append("<");
-
-                OutputFormatHelper::ForEachArg(ct->getTemplateParameters()->asArray(),
-                                               outputFormatHelper,
-                                               [&](const auto* pm) { outputFormatHelper.Append(GetName(*pm)); });
-
-                outputFormatHelper.Append(">");
-
-                /* Handle an explicit specialization of a single CXXMethod outside the class definition. */
-            } else if(const auto* clsTmpl = dyn_cast_or_null<ClassTemplateSpecializationDecl>(parent)) {
-                CodeGenerator codeGenerator{outputFormatHelper, mLambdaStack};
-                codeGenerator.InsertTemplateArgs(*clsTmpl);
-            }
-
-            outputFormatHelper.Append("::");
-        }
-    }
+//    if(methodDecl) {
+//        if(!isFirstCxxMethodDecl) {
+//            const auto* parent = methodDecl->getParent();
+//            outputFormatHelper.Append(parent->getNameAsString());
+//
+//            /* Handle a templated CXXMethod outside class which is _not_ specialized. */
+//            if(const auto* ct = parent->getDescribedClassTemplate()) {
+//                outputFormatHelper.Append("<");
+//
+//                OutputFormatHelper::ForEachArg(ct->getTemplateParameters()->asArray(),
+//                                               outputFormatHelper,
+//                                               [&](const auto* pm) { outputFormatHelper.Append(GetName(*pm)); });
+//
+//                outputFormatHelper.Append(">");
+//
+//                /* Handle an explicit specialization of a single CXXMethod outside the class definition. */
+//            } else if(const auto* clsTmpl = dyn_cast_or_null<ClassTemplateSpecializationDecl>(parent)) {
+//                CodeGenerator codeGenerator{outputFormatHelper, mLambdaStack};
+//                codeGenerator.InsertTemplateArgs(*clsTmpl);
+//            }
+//
+//            outputFormatHelper.Append("::");
+//        }
+//    }
 
     if(!isa<CXXConversionDecl>(decl)) {
         if(isa<CXXConstructorDecl>(decl) || isa<CXXDestructorDecl>(decl)) {

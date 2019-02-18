@@ -26,6 +26,7 @@
 #include "AutoStmtHandler.h"
 #include "CompilerGeneratedHandler.h"
 #include "FunctionDeclHandler.h"
+#include "ClassHandler.h"
 #include "GlobalVariableHandler.h"
 #include "ImplicitCastHandler.h"
 #include "StaticAssertHandler.h"
@@ -60,14 +61,17 @@ public:
     explicit CppInsightASTConsumer(Rewriter& rewriter)
     : ASTConsumer()
     , mMatcher{}
+    /*
     , mCompilerGeneratedHandler{rewriter, mMatcher}
     , mStaticAssertHandler{rewriter, mMatcher}
     , mTemplateHandler{rewriter, mMatcher}
-    , mGlobalVariableHandler{rewriter, mMatcher}
     , mImplicitCastHandler{rewriter, mMatcher}
     , mAutoStmtHandler{rewriter, mMatcher}
     , mUserDefinedLiteralHandler{rewriter, mMatcher}
     , mFunctionDeclHandler{rewriter, mMatcher}
+     */
+    , mGlobalVariableHandler{rewriter, mMatcher}
+    , mClassHandler{rewriter, mMatcher}
     {
     }
 
@@ -75,14 +79,15 @@ public:
 
 private:
     MatchFinder               mMatcher;
-    CompilerGeneratedHandler  mCompilerGeneratedHandler;
-    StaticAssertHandler       mStaticAssertHandler;
-    TemplateHandler           mTemplateHandler;
+//    CompilerGeneratedHandler  mCompilerGeneratedHandler;
+//    StaticAssertHandler       mStaticAssertHandler;
+//    TemplateHandler           mTemplateHandler;
     GlobalVariableHandler     mGlobalVariableHandler;
-    ImplicitCastHandler       mImplicitCastHandler;
-    AutoStmtHandler           mAutoStmtHandler;
-    UserDefinedLiteralHandler mUserDefinedLiteralHandler;
-    FunctionDeclHandler       mFunctionDeclHandler;
+//    ImplicitCastHandler       mImplicitCastHandler;
+//    AutoStmtHandler           mAutoStmtHandler;
+//    UserDefinedLiteralHandler mUserDefinedLiteralHandler;
+//    FunctionDeclHandler       mFunctionDeclHandler;
+    ClassHandler              mClassHandler;
 };
 //-----------------------------------------------------------------------------
 
