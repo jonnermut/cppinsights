@@ -61,7 +61,7 @@ std::map<std::string, TypeMapping> mappings = {
 
 namespace clang::insights {
 
-    static TypeMapping& GetMapping(const QualType& t)
+    static TypeMapping GetMapping(const QualType& t)
     {
         string typeName = GetName(t, Unqualified::Yes);
 
@@ -71,7 +71,9 @@ namespace clang::insights {
             return ret;
         }
 
-        throw std::runtime_error("Could not map type: " + typeName);
+        // fallback is a 1-1 mapping
+        auto ret = TypeMapping(typeName, typeName);
+        return ret;
     }
 
     std::string GetSwiftName(const QualType& t)

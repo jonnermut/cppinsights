@@ -63,7 +63,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "/git/cppinsights/tests/test.cpp"
+            argument = "&quot;/Users/jon/Library/Autosave Information/TestTranspile/TestTranspile/test.cpp&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
